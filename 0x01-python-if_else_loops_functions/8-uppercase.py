@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
     capital = 0
-    for letter in str:
-        if (ord(letter) >= ord('a') and ord(letter) <= ord('z')):
+    for c in str:
+        if (ord(c) >= ord('a') and ord(c) <= ord('z')):
             capital = 32
         else:
             capital = 0
-        print("{:letter}".format(ord(letter) - capital), end='')
+        print("{:c}".format(ord(c) - capital), end='')
     print("")
-
