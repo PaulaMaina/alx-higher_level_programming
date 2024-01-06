@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
-    evenList = my_list[:]
+    evenList = []
 
-    for num in evenList:
+    for num in my_list:
         if (num % 2) == 0:
-            evenList[num] = True
+            evenList.append(True)
         else:
-            evenList[num] = False
+            evenList.append(False)
 
     return evenList
