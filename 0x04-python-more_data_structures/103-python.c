@@ -6,7 +6,7 @@
  * @p: python object
  *
  */
-void print_python_bytes(PObject *p)
+void print_python_bytes(PyObject *p)
 {
 	char *str;
 	long int size, x, lim;
@@ -62,7 +62,7 @@ void print_python_list(PyObject *p)
 	for (x = 0; x < size; x++)
 	{
 		object = ((PyListObject *)p)->ob_item[x];
-		printf("Element %ld: %s\n", i, ((obj)->ob_type)->tpname);
+		printf("Element %ld: %s\n", i, ((obj)->ob_type)->tp_name);
 
 		if (PyBytes_Check(object))
 			print_python_bytes(object);
