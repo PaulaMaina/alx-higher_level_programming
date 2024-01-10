@@ -5,4 +5,4 @@ def print_sorted_dictionary(a_dictionary):
     for k in dict_keys:
         dict_new[k] = a_dictionary[k]
     for k in dict_new:
-        print("{} : {}".format(k, dict_new[k]))
+        print("{}: {}".format(k, dict_new[k]))
