@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             new_list.append(my_list_1[index] / my_list_2[index])
         except ZeroDivisionError:
-            print("division by zero")
+            print("division by 0")
             new_list.append(0)
         except TypeError:
             print("wrong type")
