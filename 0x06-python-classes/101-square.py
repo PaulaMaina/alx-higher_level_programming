@@ -93,5 +93,5 @@ class Square():
             return string
         string += "{}".format("\n" * self.__position[1])
         string += "{}".format("\n".join(
-            [" " * self.__position[0] + "#" *self.__size] * self.__size))
+            [" " * self.__position[0] + "#" * self.__size] * self.__size))
         return string
