@@ -89,7 +89,7 @@ class Square():
     def __str__(self):
         """Returns a string same as the one prints in my_print function"""
         string = ""
-        if self_..size == 0:
+        if self.__size == 0:
             return string
         string += "{}".format("\n" * self.__position[1])
         string += "{}".format("\n".join(
