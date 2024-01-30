@@ -2,7 +2,7 @@
 """Add integers module"""
 
 
-def add_integer(a,b=98):
+def add_integer(a, b=98):
     """Add two integers
         Args:
             a: first integer

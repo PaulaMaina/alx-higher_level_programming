@@ -17,7 +17,6 @@ def matrix_divided(matrix, div):
             The new matrix containing quotients
     """
     msg = "matrix must be a matrix(list of lists) of integers/floats"
-    new_mat = []
 
     if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError(msg)

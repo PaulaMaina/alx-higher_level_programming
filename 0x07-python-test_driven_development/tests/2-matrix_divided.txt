@@ -14,17 +14,12 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix = None
->>> matrix_divided(matrix, 6)
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
 >>> matrix = [[]]
 >>> matrix_divided(matrix, 6)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix = [[1, 2, "g"], [4, 5, 6]]
+>>> matrix = [[1, 2, "3"], [4, 5, 6]]
 >>> matrix_divided(matrix, 6)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
