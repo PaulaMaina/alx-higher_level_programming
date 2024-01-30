@@ -3,28 +3,37 @@
 
 
 def matrix_divided(matrix, div):
-    """Division of matrix elements"""
+    """Division of matrix elements
+
+        Args:
+            matrix: a list of lists of ints or floats
+            div: The divisor
+        Raises:
+            TypeError: if the matrix is not a list of lists or
+                the rows of the matrix  are not of equal size or
+                div is not an int or float
+            ZeroDivisionError: if div is 0
+        Returns:
+            The new matrix containing quotients
+    """
     msg = "matrix must be a matrix(list of lists) of integers/floats"
     new_mat = []
 
-    if not matrix or matrix is [[]] or matrix is None:
+    if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError(msg)
-    if type(div) is not int and type(div) is not float and div is not None:
+    if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if matrix[0]:
-        size = len(matrix[0])
-    else:
-        raise TypeError(msg)
-    for x in range(len(matrix)):
-        if len(matrix[x]) != size:
+    row_length = None
+    for row in matrix:
+        if not isinstance(row, list) or len(row) == 0:
+            raise TypeError(msg)
+        if row_length is not None and row_length != len(row):
             raise TypeError("Each row of the matrix must have the same size")
-        new_mat.append([])
-        for y in matrix[x]:
-            if type(y) is int or type(y) is float:
-                new_mat[x].append(round(y / div, 2))
-            else:
+        row_length = len(row)
+        for col in row:
+            if not isinstance(col, int) and not isinstance(col, float):
                 raise TypeError(msg)
 
-    return new_mat
+    return [[round(col / div, 2) for col in row] for row in matrix]

@@ -3,20 +3,21 @@
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after . ? and :"""
-    last = " "
-    word = ""
-    ops = [".", "?", ":"]
-    if text == "":
-        print(word, end="")
-    if type(text) is not str:
+    """Prints a text with 2 new lines after . ? and :
+        Args:
+            text: Text to print
+        Raises:
+            TypeError: if text is not a string
+    """
+    first = 0
+    ops = {".", "?", ":"}
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
-    for s in text:
-        if s is last and s == " ":
-            last = s
-            continue
-        is last in ops and s == " ":
-            last = s
-            continue
-        word += s + "\n" + "\n" if s in ops else s
-    print(word.rstrip(" "), end="")
+    for last in range(len(text)):
+        if text[last] in ops:
+            line = text[first:last + 1] + "\n\n"
+            first = last + 1
+            print("{}".format(line.strip(" ")), end="")
+    if first <= last:
+        line = text[first:last + 1]
+        print("{}".format(line.strip(" ")), end="")

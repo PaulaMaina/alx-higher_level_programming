@@ -3,14 +3,16 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """Prints the first and last name"""
-    if type(first_name) != str:
+    """Prints the first and last name
+        Args:
+            first_name: first name
+            last_name: last name
+        Raises:
+            TypeError: The first_name or last_name is not a string
+    """
+    if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
-    if type(last_name) != str:
+    if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
-    print(f"My ma,e is {first_name}", end="")
-    if len(last_name) == 0:
-        print()
-    else:
-        print(f" {last_name}")
+    print("My name is {} {}".format(first_name, last_name))
