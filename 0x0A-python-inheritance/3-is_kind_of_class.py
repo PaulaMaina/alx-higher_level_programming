@@ -4,7 +4,7 @@
 
 def is_kind_of_class(obj, a_class):
     """Checks if an object is an instance of or
-    an instance of a class that is a child of specified class 
+    an instance of a class that is a child of specified class
 
         Args:
             obj: object
