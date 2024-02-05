@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a MyInt Class"""
 
+
 class MyInt(int):
     """Inverts == and !="""
     def __eq__(self, other):
