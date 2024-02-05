@@ -16,7 +16,7 @@ ValueError: age must be greater than 0
 
 >>> bg.integer_validator("perimeter", -7)
 Traceback (most recent call last):
-ValueError: distance must be greater than 0
+ValueError: perimeter must be greater than 0
 
 >>> bg.integer_validator("tea")
 Traceback (most recent call last):
