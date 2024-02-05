@@ -2,7 +2,7 @@
 """MyList subclass"""
 
 
-class MyList:
+class MyList(list):
     """Subclass of List class"""
 
     def print_sorted(self):
