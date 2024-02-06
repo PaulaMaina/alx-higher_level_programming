@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Pascal triangle module"""
 
+
 def pascal_triangle(n):
     """Returns a 2D list representing the Pascal's triangle"""
     pascal = []
