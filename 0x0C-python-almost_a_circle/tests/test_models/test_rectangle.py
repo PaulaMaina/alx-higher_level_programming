@@ -239,7 +239,7 @@ class RectangleTest(unittest.TestCase):
         """Checks x value."""
         self.assertRaisesRegex(
             ValueError,
-            "x must be > 0",
+            "x must be >= 0",
             Rectangle,
             17, 13, -12
         )
@@ -248,7 +248,7 @@ class RectangleTest(unittest.TestCase):
         """Checks y value."""
         self.assertRaisesRegex(
             ValueError,
-            "y must be > 0",
+            "y must be >= 0",
             Rectangle,
             17, 13, 12, -16
         )
