@@ -40,10 +40,10 @@ class Base:
                     )
             f.write(str_json)
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         """Returns a list of dictionaries from the JSON string rep."""
-        if json_string is None or json_string == "":
+        if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
 
