@@ -35,7 +35,9 @@ class Base:
 
         filename = cls.__name__ + ".json"
         with open(filename, "w") as f:
-            str_json = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            str_json = cls.to_json_string(
+                    [obj.to_dictionary() for obj in list_objs]
+                    )
             f.write(str_json)
 
     @classmethod
@@ -81,7 +83,8 @@ class Base:
             writer = csv.writer(f)
             for obj in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow(
+                            [obj.id, obj.width, obj.height, obj.x, obj.y])
                 elif cls.__name__ == "Square":
                     writer.writerow([obj.id, obj.size, obj.x, obj.y])
 
