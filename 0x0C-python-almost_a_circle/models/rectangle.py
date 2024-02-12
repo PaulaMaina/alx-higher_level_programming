@@ -5,7 +5,16 @@ from models.base import Base
 class Rectangle(Base):
     """A subclass of the Base class with dimension and position attributes"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initializes the attributes of the Rectangle class"""
+        """
+        Constructor for Rectangle class.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int): x-coordinate of the rectangle's position.
+            y (int): y-coordinate of the rectangle's position.
+            id (int): Identifier of the rectangle.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
