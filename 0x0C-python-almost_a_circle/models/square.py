@@ -6,7 +6,7 @@ class Square(Rectangle):
     """Inherits the size argument from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """Initiates the class attributes of Square"""
-        super().__init(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
         self.size = size
 
     @property
