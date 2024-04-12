@@ -15,6 +15,6 @@ if __name__ == "__main__":
                 ORDER BY cities.id""", (name_match,))
     rows = cur.fetchall()
     result = list(row[0] for row in rows)
-    print(result, sep=", ")
+    print(*result, sep=", ")
     cur.close()
     db.close()
