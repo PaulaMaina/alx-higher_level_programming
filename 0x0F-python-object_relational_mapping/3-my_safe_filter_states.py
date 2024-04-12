@@ -9,7 +9,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     name_match = sys.argv[4]
     cur.execute("""SELECT * FROM states WHERE states.name
-                LIKE %s""", (name_match, ))
+                LIKE %s""", (name_match,))
     rows = cur.fetchall()
 
     for row in rows:
