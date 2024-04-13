@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Contains the class definition of a State and a Base instance"""
-from model_state import Base
+from relationship_state import Base
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
