@@ -3,7 +3,7 @@
 
 
 from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+from urllib.error import HTTPError
 from sys import argv
 
 
@@ -14,9 +14,7 @@ def error_code(url: str):
             body = response.read()
         print(body.decode("uft-8"))
     except HTTPError as e:
-        print("Error code: ", e.code)
-    except URLError as e:
-        print("Error reason: ", e.reason)
+        print("Error code: {}".format(e.code))
 
 
 if __name__ == "__main__":
