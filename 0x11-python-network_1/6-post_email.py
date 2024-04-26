@@ -7,9 +7,9 @@ from sys import argv
 
 
 def request_email(url: str, email: str):
-    data = urlencode({"email": email})
-    email_encode = data.encode("utf-8")
-    req = requests.get(url, email_encode)
+    email_data = {"email": email}
+    req = requests.post(url, data=email_data)
+    print(req.text)
 
 
 if __name__ == "__main__":
