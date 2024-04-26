@@ -7,6 +7,7 @@ from sys import argv
 
 
 def search_user(letter: str):
+    """Sends a POST request to http://0.0.0.0:5000/search_user with a letter"""
     letter_data = {"q": letter}
     url = "http://0.0.0.0:5000/search_user"
     req = requests.post(url, data=letter_data)
