@@ -10,7 +10,7 @@ def search_user(letter: str):
     letter_data = {"q": letter}
     url = "http://0.0.0.0:5000/search_user"
     req = requests.post(url, data=letter_data)
-    
+
     try:
         req_dict = req.json()
         if req_dict:
