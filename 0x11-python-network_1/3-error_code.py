@@ -8,6 +8,7 @@ from sys import argv
 
 
 def error_code(url: str):
+    """This function displays the error code"""
     try:
         req = Request(url)
         with urlopen(req) as response:
