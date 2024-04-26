@@ -7,10 +7,8 @@ from sys import argv
 
 
 def get_header(url: str):
-    try:
-        req = requests.get(url)
-            body = response.read()
-        print(req.headers.get("X-Request-Id"))
+    req = requests.get(url)
+    print(req.headers.get("X-Request-Id"))
 
 
 if __name__ == "__main__":
