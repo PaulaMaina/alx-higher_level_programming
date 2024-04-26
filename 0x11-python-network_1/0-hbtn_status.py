@@ -7,7 +7,6 @@ from urllib.error import URLError
 
 
 def fetch_body():
-    """Function to fetch the URL"""
     try:
         req = Request("https://alx-intranet.hbtn.io/status")
         with urlopen(req) as response:
