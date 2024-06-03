@@ -10,11 +10,11 @@ req.get(url, function (error, response, body) {
   } else {
     const content = JSON.parse(body);
     const characters = content.characters;
-	  printCharacters(characters, 0);
+    printCharacters(characters, 0);
   }
 });
 
-function printCharacters(characters, index) {
+function printCharacters (characters, index) {
   req(characters[index], function (error, response, body) {
     if (error) {
       console.log(error);
