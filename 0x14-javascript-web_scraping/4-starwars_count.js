@@ -10,7 +10,7 @@ req.get(url, function (error, response, body) {
   } else {
     const content = JSON.parse(body);
     content.results.forEach((film) => {
-      content.characters.forEach((character) => {
+      film.characters.forEach((character) => {
         if (character.includes(18)) {
           num += 1;
         }
