@@ -10,15 +10,19 @@ req.get(url, function (error, response, body) {
   } else {
     const content = JSON.parse(body);
     const characters = content.characters;
-    for (const character of characters) {
-      req.get(character, function (error, response, body) {
-        if (error) {
-          console.log(error);
-        } else {
-          const names = JSON.parse(body);
-          console.log(names.name);
-        }
-      });
-    }
+	  printCharacters(characters, 0);
   }
 });
+
+function printCharacters(characters, index) {
+  req(characters[index], function (error, response, body) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(JSON.parse(body).name);
+      if (index + 1 < characters.length) {
+        printCharacters(characters, index + 1);
+      }
+    }
+  });
+}
